@@ -155,7 +155,7 @@ img{
 }
 
 .split>div p{
-    font-size: min(2vw,28px);
+    font-size: min(2vw,16px);
     max-width: 25vw;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
