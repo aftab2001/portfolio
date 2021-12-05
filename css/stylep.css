@@ -121,7 +121,9 @@ font-size: 2vw;
   margin: 0 auto;
   border-width: 3px;
 }
-
+.hobbies{
+padding-bottom:10vh;
+}
 
 img{
     object-fit: cover;
