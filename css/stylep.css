@@ -111,6 +111,7 @@ font-size: 2vw;
 .heading{
     max-width: 60vw;
     margin: 0 auto;
+    font-size:min(4vw,32px);
 }
 .heading::after{
     content: "";
