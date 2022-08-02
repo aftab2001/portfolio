@@ -1,38 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 *{
     margin:0;
 }
+
 body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 1.2px;
+    font-size: 16px;
     background-color:#fffcfa;
 }
+label{
+font-size: 1.6em;
+font-weight: 500;
+}
 
+input::-webkit-input-placeholder {
+
+    font-size: 1.2em ;
+    letter-spacing: 1px;
+    line-height: 3;
+}
+.center{
+    text-align: center;
+}
 form{
 
     width: 80vw;
-    padding:4vw;
+    padding:10px 4vw;
     display: block;
     margin: 20vh auto;
-    box-shadow: 0px -1px 13px -4px #e1b9a0aa;
+    box-shadow: 0px -1px 13px -4px #88BBBD;
     border-radius: 20px;
     background-color: #fff;
 }
-label{
-    font-size: min(4vw,32px);
 
-}
-h1{
-    max-width: 34ch;
-    font-size: min(4vw,23px);
-}
 
 .split>td{
     width: 40vw;
 }
 
-.split input[type=email],input[type=text]
+ input[type=email],input[type=text]
 {
-   width: max(38vw,40%);
+   width: 100%;
    padding: 2.5vh 0;
    border: none;
    outline: none;
@@ -54,11 +63,6 @@ h1{
     color: tomato;
 }
 
-input::-webkit-input-placeholder {
-
-    font-size: min(4vw,22px);
-    line-height: 3;
-}
 input[type=submit]{
     background-color: #EF4339;
     border: none;
@@ -89,16 +93,56 @@ input[type=submit]:hover{
     transition: background-color 1000ms linear;
      
 }
+.box{
+    display: flex;
+}
+.left,.right{
+    width: 40vw;
+    /* margin: 0 5px; */
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    background: #88BBBD;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    
+}
+nav{
+    margin: 4vh 0;
+    padding:2vh 0;
+    
+    
+    /* border-bottom: 1px solid black; */
+}
+
+ul{
+    list-style-type: none;
+    margin-left: 5vw;
+}
+/* .left>input,
+.right>input{
+    margin: 14px;
+} */
+
 @media  (min-width:425px){
     form{
-        width: 50vw;
+        width: 70vw;
     }
     .split>td{
         width: 25vw;
     }
     .split input[type=email],input[type=text]
 {
-    width: 22vw;
+   min-width: 230px;
+  
+}
+.split>td>input{
+    padding-left: 19px;
+    width: 100%;
 }
     
 }
