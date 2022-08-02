@@ -8,15 +8,22 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-<form action="">
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+<form action="" name="myform" >
     
     <div class="form-container">
-        <h1>Send me your views</h1>
+        <h1 class="center">Send me your views</h1>
         <br>
 
         <br>
         <br>
-        <table>
+        <!-- <table>
             <tr class="split">
             <td >
                 <label class="aesteric" for="name">Name</label>
@@ -27,23 +34,61 @@
                <br> <input type="email" placeholder="Your email">
             </td>
             </tr>
-         </table>
+         </table> -->
+         <div class="box">
+            <div class="left">
+                
+                <label class="aesteric" for="name">Name</label>
+                <br><input onchange="change()" name="input1" type="text" placeholder="Your name">
+            </div>
+            <div class="right">
+                <label class="aesteric" for="email">Email</label>
+                <br> <input onchange="change()"name="input1" type="email" placeholder="Your email">
+
+            </div>
+         </div>
          <br>
          <br>
          <div class="clg">
-         <label for="college">College</label>
+         <label for="college" class="aesteric">College</label>
          <br>
-         <input   type="text" placeholder="Your College" >
+         <input   type="text" onfcusout="change()" name="input1" placeholder="Your College" >
          </div>
          <br>
          <br>
 <label  class="aesteric" for="message">Message</label>
-<br><input type="text-area" placeholder="Message or review" >
+<br><input type="text-area" onclick="change()"name="input1" placeholder="Message or review" >
 <br><input type="submit">
     </div>
     
 
-</form>
+</form >
     
 </body>
+<script>
+    // function change()
+    // {
+    //     if(document.getElementsByName("input").value=" ")
+    //     alert("empty field")
+    // }
+    myform.addEventListener("submit",myFunction);
+    function myFunction()
+    {
+        // alert("focusout")
+       if(!document.getElementsByName("input1").value){
+        alert(" not all field are filled")
+        // return false;
+        }
+        else
+        alert("succesfully submitted")
+    }
+    function validateform(){
+        if(document.getElementsByTagName("input").value=""){
+        alert(" not all field are filled")
+        return false;
+        }
+        else
+        alert("succesfully submitted")
+    }
+</script>
 </html>
